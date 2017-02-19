@@ -7,7 +7,7 @@ import { NavController } from 'ionic-angular';
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Description
+      All products
     </ion-title>
     <ion-buttons start>
       <button ion-button (click)="dismiss()">
@@ -37,7 +37,7 @@ import { NavController } from 'ionic-angular';
 <ion-footer>
     <button ion-button outline icon-left round>
       <ion-icon name="ios-add-circle-outline"></ion-icon>
-      Add Products
+      Add to list
     </button>
 </ion-footer>
 `
@@ -52,13 +52,13 @@ export class ModalContentPage {
   ) {
     var characters = [
       {
-        name: 'Gollum',
-        quote: 'Sneaky little hobbitses!',
+        name: 'Computer Mouse',
+        quote: 'Description',
         image: 'assets/img/avatar-gollum.jpg',
         items: [
-          { title: 'Race', note: 'Hobbit' },
-          { title: 'Culture', note: 'River Folk' },
-          { title: 'Alter Ego', note: 'Smeagol' }
+          { title: 'Price', note: '10$' },
+          { title: 'Quantity', note: '100' },
+          { title: 'Weight', note: '100g' }
         ]
       },
     ];
