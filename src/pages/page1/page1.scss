@@ -48,6 +48,37 @@ color: #ffffff;
 }
 }
  .card-background-page {
+   
+.label-ios {
+    margin: 11px 8px 11px 0;
+}
+.item-block {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 35%;
+    min-height: 4.4rem;
+    border: 0;
+    font-weight: normal;
+    line-height: normal;
+    text-align: initial;
+    text-decoration: none;
+    color: inherit;
+}
+.badge-ios {
+    border-radius: 10px;
+    color: #fff;
+    background-color: #1da9e4;
+}
   ion-card {
     position: relative;
     text-align: center;
