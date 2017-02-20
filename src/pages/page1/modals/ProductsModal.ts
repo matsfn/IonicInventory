@@ -35,10 +35,15 @@ import { NavController } from 'ionic-angular';
   </ion-list>
 </ion-content>
 <ion-footer>
-    <button ion-button outline icon-left round>
+   <ion-row>
+     <ion-col width-100 style="text-align: center">
+           <button ion-button outline icon-left round>
       <ion-icon name="ios-add-circle-outline"></ion-icon>
       Add to list
     </button>
+     </ion-col>
+    </ion-row>
+
 </ion-footer>
 `
 })

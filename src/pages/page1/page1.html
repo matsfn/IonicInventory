@@ -9,19 +9,19 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="card-background-page">
+<ion-content padding class="card-background-page" class="static-info">
   <ion-item>
   <ion-icon name="ios-information-circle-outline" item-left></ion-icon>
   Product missing items
   <ion-badge item-right>3</ion-badge>
 </ion-item>
-
+</ion-content>
   <!--<p>-->
     <!--If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
   </p>
 
   <button ion-button secondary menuToggle>Toggle Menu</button>-->
-
+<ion-content padding class="card-background-page">
     <ion-grid>
       <ion-row wrap>
         <ion-col width-33 *ngFor="let item of products">
@@ -30,6 +30,7 @@
             <div class="card-subtitle">{{item.name}}</div>
           </ion-header>
             <img src={{item.imageUrl}} />
+          
             <!--<div class="card-title">{{item.name}}</div>-->
             <!--<div class="card-subtitle">41 Listings</div>-->
           <ion-footer>

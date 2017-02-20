@@ -12,7 +12,7 @@ export class Product {
     }
 }
 
-let API_PATH: string = 'https://api.bubblmee.com/'
+let API_PATH: string = 'https://dev-api.bubblmee.com/'
 
 @Component({
   selector: 'page-page1',
@@ -23,23 +23,22 @@ export class Page1 {
   constructor(public http: Http, public navCtrl: NavController, public modalCtrl: ModalController) {
     this.authenticate();
     this.makeRequest();
-    
   }
   authenticate(): void {
     var headers = new Headers();
     headers.append('Content-Type', 'application/json;charset=UTF-8');
     headers.append("Accept", "application/json, text/plain, */*");
-    var creds = "{\"email\":\"dev@bubblygroup.com\",\"password\":\"XxXpFTHz\"}";
+    var creds = "{\"email\":\"kgorob@gmail.com\",\"password\":\"XxXpFTHz\"}";
     let options = new RequestOptions({ headers: headers });
 
-    this.http.post('https://api.bubblmee.com/merchant/login', creds, options)
+    this.http.post('https://dev-api.bubblmee.com/merchant/login', creds, options)
       //.map(res => res.json())
       .subscribe(
       () => console.log('Authentication Complete')
       );
   }
   makeRequest() : void {
-      this.http.get(API_PATH + 'merchant/pos/3c0fa90a-21a5-4d53-be12-7185cf4dd291/products', {withCredentials: true })
+      this.http.get(API_PATH + 'merchant/pos/6d99a82e-d89d-4535-a3e2-07bd243053e5/products', {withCredentials: true })
       .subscribe((res: any) => {console.log(res.json()), this.products = res.json()})
 
   }

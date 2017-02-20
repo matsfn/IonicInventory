@@ -4,7 +4,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
-
+import { LoadingController } from 'ionic-angular';
 
 @Component({
   templateUrl: 'app.html'
@@ -16,20 +16,29 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform) {
+  constructor(public platform: Platform, public loadingCtrl: LoadingController) {
     this.initializeApp();
-
+    this.presentLoading();
+  
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Inventory', component: Page1 },
       { title: 'Charts', component: Page2 },
       { title: 'Control', component: Page2 }
     ];
-
+    console.log(this.pages[0])
+  }
+    presentLoading() {
+    let loader = this.loadingCtrl.create({
+      content: "Please wait...",
+      duration: 3000
+    });
+    loader.present();
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
+      this.openPage(this.pages[0]);
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();

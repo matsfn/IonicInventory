@@ -1,4 +1,19 @@
+.text-ios-primary {
+    color: #ffffff !important;
+}
+
 page-page1 {
+  ion-grid {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 5px;
+    width: 100%;
+    margin-top:0px;
+}
 
 ion-footer {
     position: absolute;
@@ -8,6 +23,28 @@ ion-footer {
     display: block;
     width: 100%;
     background: #1da9e4;
+}
+.item-block {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 32%;
+    min-height: 4.4rem;
+    border: 0;
+    font-weight: normal;
+    line-height: normal;
+    text-align: initial;
+    text-decoration: none;
+    color: inherit;
 }
 .card-ios {
   margin: 12px 12px 12px 12px;
@@ -48,32 +85,28 @@ color: #ffffff;
 }
 }
  .card-background-page {
-   
+
+.scroll-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    will-change: scroll-position;
+    contain: size style layout;
+    top: 62px;
+    height: 609px;
+    
+}
 .label-ios {
     margin: 11px 8px 11px 0;
 }
-.item-block {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    overflow: hidden;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    width: 35%;
-    min-height: 4.4rem;
-    border: 0;
-    font-weight: normal;
-    line-height: normal;
-    text-align: initial;
-    text-decoration: none;
-    color: inherit;
-}
+
 .badge-ios {
     border-radius: 10px;
     color: #fff;
@@ -117,7 +150,7 @@ img {
     margin-top: 5%;
     max-width: 100%;
     border: 0;
-    width: 50%;
+    width: 75%;
     height: 75%;
     margin-left: auto;
     margin-right: auto;
