@@ -28,7 +28,7 @@ export class Page1 {
     var headers = new Headers();
     headers.append('Content-Type', 'application/json;charset=UTF-8');
     headers.append("Accept", "application/json, text/plain, */*");
-    var creds = "{\"email\":\"kgorob@gmail.com\",\"password\":\"XxXpFTHz\"}";
+    var creds = "";
     let options = new RequestOptions({ headers: headers });
 
     this.http.post('https://dev-api.bubblmee.com/merchant/login', creds, options)
