@@ -18,6 +18,12 @@ import { NavController } from 'ionic-angular';
   </ion-toolbar>
 </ion-header>
 <ion-content>
+<div>
+    <ion-searchbar
+      [showCancelButton]="true"
+      >
+    </ion-searchbar>
+</div>
   <ion-list>
       <ion-item>
         <ion-avatar item-left>

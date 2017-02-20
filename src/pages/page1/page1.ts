@@ -6,10 +6,10 @@ import { ModalController, Platform, NavParams, ViewController } from 'ionic-angu
 import { ModalContentPage } from '../page1/modals/ProductsModal';
 
 export class Product {
-    name: string;
-    constructor(
-    ){
-    }
+  name: string;
+  constructor(
+  ) {
+  }
 }
 
 let API_PATH: string = 'https://dev-api.bubblmee.com/'
@@ -19,7 +19,7 @@ let API_PATH: string = 'https://dev-api.bubblmee.com/'
   templateUrl: 'page1.html'
 })
 export class Page1 {
- products : Observable<Product[]>
+  products: Observable<Product[]>
   constructor(public http: Http, public navCtrl: NavController, public modalCtrl: ModalController) {
     this.authenticate();
     this.makeRequest();
@@ -37,10 +37,9 @@ export class Page1 {
       () => console.log('Authentication Complete')
       );
   }
-  makeRequest() : void {
-      this.http.get(API_PATH + 'merchant/pos/6d99a82e-d89d-4535-a3e2-07bd243053e5/products', {withCredentials: true })
-      .subscribe((res: any) => {console.log(res.json()), this.products = res.json()})
-
+  makeRequest(): void {
+    this.http.get(API_PATH + 'merchant/pos/6d99a82e-d89d-4535-a3e2-07bd243053e5/products', { withCredentials: true })
+      .subscribe((res: any) => { console.log(res.json()), this.products = res.json() })
   }
   openModal(characterNum) {
     let modal = this.modalCtrl.create(ModalContentPage, characterNum);
