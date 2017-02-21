@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Headers, Http, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { ModalController, Platform, NavParams, ViewController } from 'ionic-angular';
+import { ModalController} from 'ionic-angular';
 import { ModalContentPage } from '../page1/modals/ProductsModal';
 
 export class Product {

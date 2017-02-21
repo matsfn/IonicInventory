@@ -1,9 +1,54 @@
 .text-ios-primary {
     color: #ffffff !important;
 }
+.header-ios .toolbar-ios:last-child .toolbar-background-ios {
+    border-width: 0;
+}
 $searchbar-ios-border-color: red;
 
 page-page1 {
+  .ion-md-add:before {
+    content: "\f273";
+    font-size: 2.5em;
+}
+  .fab-ios {
+    color: #fff;
+    background-color: #1da9e4;
+    border: 1px solid;
+}
+ion-fab[center] {
+    left: 49%;
+    margin-left: -28px;
+}
+  .fab {
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    z-index: 0;
+    display: block;
+    overflow: hidden;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 56px;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color, opacity 100ms linear;
+    background-clip: padding-box;
+    -webkit-font-kerning: none;
+    font-kerning: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    contain: strict;
+}
   ion-grid {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -15,6 +60,10 @@ page-page1 {
     width: 100%;
     margin-top:0px;
 }
+.item-ios.item-block .item-inner {
+    padding-right: 8px;
+    border-bottom: none;
+}
 
 ion-footer {
     position: absolute;
@@ -24,6 +73,7 @@ ion-footer {
     display: block;
     width: 100%;
     background: #1da9e4;
+    height: 50px;
 }
 .item-block {
     display: -webkit-flex;
@@ -86,11 +136,11 @@ color: #ffffff;
     padding-top: 4px;
 }
 }
+
  .card-background-page {
 
 .scroll-content {
     position: absolute;
-    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
@@ -101,7 +151,7 @@ color: #ffffff;
     -webkit-overflow-scrolling: touch;
     will-change: scroll-position;
     contain: size style layout;
-    top: 62px;
+    top: 60px;
     height: 609px;
     
 }
@@ -129,7 +179,7 @@ color: #ffffff;
   }
 
   .card-subtitle {
-    font-size: 1.0em;
+    font-size: 1.5em;
     position: absolute;
     top: 52%;
     width: 100%;
@@ -152,8 +202,8 @@ img {
     margin-top: 5%;
     max-width: 100%;
     border: 0;
-    width: 50%;
-    height: 75%;
+    width: 40%;
+    height: 65%;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -172,4 +222,56 @@ img {
     border-top: 0.55px solid transparent;
     border-bottom: 0.55px solid rgba(0, 0, 0, 0.05);
     background: rgb(29, 169, 228);
+}
+
+.custom-modal-card {
+    ion-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+    width: 100%;
+    background: #fff;
+}
+img {
+    margin-top: 5%;
+    max-width: 100%;
+    border: 0;
+    width: 40%;
+    height: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+ion-card {
+    position: relative;
+    text-align: center;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-subtitle {
+    font-size: 1.5em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: black;
+ }
+ .card-ios {
+  margin: 12px 12px 12px 40px;
+  width: calc(100% - 24px);
+  border-radius: 18px;
+  font-size: 1.4rem;
+  background: #fff;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  height: 220px;
+}
 }
